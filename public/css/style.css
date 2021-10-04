@@ -1,0 +1,172 @@
+
+*{ font-family: 'poppins';}
+/*********landing page***********/
+
+#landingPage { margin-top: 120px; margin-left: 0px;}
+#main-nav {box-shadow: 2px 2px 5px #3292a6;opacity: 0.9;background-color: #EAEEF2; }
+#main-nav .nav-link {font-size: 1.5rem;}
+     
+#home{
+    background-image: url(../img/landingPage/Banner\ Slider.png);
+    width: 100%; height: auto; min-height: 59rem;
+    background-repeat: no-repeat;  background-size: cover;
+    }
+
+.innerHome{ margin:150px 20px;}
+.btn-danger { width: 200px;}
+#main-nav .nav-item {font-size: 1.4rem;padding-right: 2.5rem; }
+#serviceCards .col-md-4 .shadow-lg { height:330px;}
+#services:focus-visible { 
+    transition: 2s;
+    
+    transform: scale(1.1);}
+#serviceCards .col-md-4 .shadow-lg:hover {
+    transform: scale(1.1);
+    transition:all 2s;
+}
+#serviceCards img:hover {
+    transform: rotate(360deg);
+    transition:all 2s;
+    
+}
+
+#serviceCards {padding-bottom: 500px;}
+#contactUs {margin-top: -200px;}
+#innerContactUs{background-color: #005D8D;}
+#footer {background-color:#EAEEF2;}
+
+@media (max-width: 768px) {
+    #home {min-height: 500px; }
+    #home h1 {font-size: 3rem; }
+    .mb-resp {margin-bottom: 1rem; } 
+}
+
+/********** View Patient Page***********/
+.anchors{ color:#3292a6; border-bottom: none;}
+a {border-bottom: none;}
+
+/*** section one  ***/
+.my-custom-scrollbar {height: 550px;overflow: auto;}
+.table-wrapper-scroll-y {display: block;}
+.modal-footer button{width:120px;}
+#addPatientModal .modal-body .form-control { box-shadow: 1px 1px 5px rgb(187, 186, 186);border:0px ;}
+
+/*** section two ***/
+#bloodPressure {font-size: 18px;}
+#doctorImg,#patientImg{width:60px}
+#doctorDiagnosis, #Medicine, #medicalTest, #ctScan, #ecgResult,#prediction,#notes,#activities  {overflow: auto; height: 280px;}
+#sectionTwo button{ padding: 2px 8px; }
+#activities ul > li  {cursor: pointer; border-bottom: none ;} 
+
+#notes, #prediction{height: 300px ;}
+#notes li, #Nutrition li  {list-style: none; list-style-position: outside; text-align: left; /* Remove default bullets */}
+#notes li::before, #Nutrition li::before{content: "\2022"; color: orangered; font-weight: bold; display: inline-block; margin-left: -2em; width:1em;}
+/* .diagnoseDate, .medicineAmount, .testDate, .scanDate, .ecgDate{
+    font-size: 15px;
+} */
+
+.medicineRow img{
+    width:80%  ;
+}
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+   [type=radio]:checked + img  {
+    border: 2px solid #FF6600;
+    border-radius: 2%;
+  }
+#currentSymptoms, #currentDiagnosis{height: 100px; overflow: auto;}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 3px 12px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .nav-pills > .active > a,.nav-pills > .active > a:hover,
+   .nav-pills > li > a:hover {
+    color: #17a2b8 !important;
+    background-color: transparent !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius:0px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF6600;
+         }
+    .nav-pills > li > a{
+    border-radius:0px;
+    color: #17a2b8 !important;
+    font-size: 18px;
+    font-weight: 500;
+     }
+
+    #chart {
+        width: 100%;
+        height: 70%;
+        margin: auto;
+        opacity: 0.7;
+        
+    }
+/***********doctorDiagnosisTable*************/
+.dataTables_info {text-align: left; padding-left: 5px ; }
+
+
+/***********contact Us*************/
+
+#aboutHeading{
+    background: url(../img/contactUs/media4.jpg);
+    position: relative;min-height: 250px; width: 100%; text-align: center;
+    background-position: 0 -100px;background-attachment: fixed; background-repeat: no-repeat;
+}
+.darkOverlay{
+    position: absolute; top:0; left:0; width: 100%; height: 100%;
+    background-position: 0 -50px; background-color:#417E9E; opacity: 0.4;
+}
+#teamCards {
+    background-image: url(../img/landingPage/aboutUsBG.jpeg);background-attachment: fixed;
+    width: 100%; height:min-content; background-size: 100%;
+    margin-bottom: -100px;text-align: center;color: #fff;
+    }
+#teamCards .card {border-radius: 25px;width:100%;height: 100%;}
+#teamCards img {margin-top: -50px; }
+#teamCards  .card:hover {background: #ebebf8; }
+#teamCards  .fab {color: #6b6969 }
+.insideSlider{padding: 60px 100px;padding-left: 130px;}
+
+/********scrollBar********/
+/* width */
+::-webkit-scrollbar { width: 13px;}
+/* Track */
+::-webkit-scrollbar-track {background: #f1f1f1; }
+/* Handle */
+::-webkit-scrollbar-thumb {background: #888; }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: #555;}
+
+
+
+/* patientList */
+
+
+.form-control.is-valid, .was-validated .form-control:valid {
+
+    background-image: none;
+}
+.MRI{
+    width: 400px;
+    height: 300px;
+    margin: 15px;
+
+}

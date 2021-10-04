@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nabda</title>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/logstyle.css" />
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato|Quicksand'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+
+    <title>Sign in & Sign up Form</title>
+</head>
+  <body>
+      <div class="container">
+          <div class="forms-container">
+              <div class="signin-signup">
+                  <form  class="sign-in-form" id="login">
+                      <h2 class="title">Sign in</h2>
+                      <div class="input-field">
+                          <i class="fas fa-user"></i>
+                          <input type="text" placeholder="Username" name="logInMail" id="userMail"/>
+                      </div>
+                      <div class="input-field">
+                          <i class="fas fa-lock"></i>
+                          <input type="password" placeholder="Password" name="logInPass" />
+                      </div>
+                      <a href="ForgetPassword.html">Forgot your password?</a>
+                      <input type="submit" value="Login" class="btn solid" id="signIn"/>
+                      <p class="social-text">Or Sign in with social platforms</p>
+                      <div class="social-media">
+                          <a href="#" class="social-icon">
+                              <i class="fab fa-facebook-f"></i>
+                          </a>
+                          <a href="#" class="social-icon">
+                              <i class="fab fa-twitter"></i>
+                          </a>
+                          <a href="#" class="social-icon">
+                              <i class="fab fa-google"></i>
+                          </a>
+                          <a href="#" class="social-icon">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                      </div>
+                  </form>
+                  <form id="signup" class="sign-up-form needs-validation" novalidate>
+                      <h2 class="title">Sign up</h2>
+                      <div class="input-field">
+                          <i class="fas fa-user"></i>
+                          <input type="text" placeholder="Username" name="signUpName" required/>
+                          <!-- <div class="invalid-feedback text-left">
+                            You must enter valid name.
+                          </div> -->
+                      </div>
+                      <div class="input-field">
+                          <i class="fas fa-envelope"></i>
+                          <input type="email" placeholder="Email" name="signUpMail" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+                          <!-- <div class="invalid-feedback text-left">
+                            You must enter valid email.
+                          </div> -->
+                      </div>
+                      <div class="input-field">
+                          <i class="fas fa-phone-volume"></i>
+                          <input type="text" placeholder="phone number" name="signUpNum" required/>
+                          <!-- <div class="invalid-feedback text-left">
+                          You must enter valid phone number.
+                        </div> -->
+                      </div>
+                      <div class="input-field">
+                          <i class="fas fa-lock"></i>
+                          <input type="password" placeholder="Password" name="signUpPass" required/>
+                          <!-- <div class="invalid-feedback text-left">
+                            You must enter strong password.
+                          </div> -->
+                      </div>
+
+                      <div class="input-field" > 
+                            <label for="fileUpload" class=" input-file-trigger  custom-file-upload text-white ">
+                            <i class="fas fa-cloud-upload-alt"></i>											
+                            </label>
+                            <input id="fileUpload"  class="input-file"  type="file" accept=".pdf,.doc,.docx"  style="display:none;" > 
+
+                            <span id="uploadText" class="file-return">upload your CV</span>
+                       </div>
+
+                        <div class="role d-block" >
+                            <label class=" radioBox text-left">
+                            <input type="radio"  name="SignRole" value="Cardiologist"> Cardiologist
+                            <span class="checkmark"></span>
+                            </label>
+                            
+                            <label class=" radioBox text-right">
+                            <input type="radio" name="SignRole" value="testSpecialist">Radiologist
+                            <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    
+
+                      <input type="submit" class="btn" value="Sign up" id="signUp" />
+                      <p class="social-text">Or Sign up with social platforms</p>
+                      <div class="social-media">
+                          <a href="#" class="social-icon">
+                              <i class="fab fa-facebook-f"></i>
+                          </a>
+                          <a href="#" class="social-icon">
+                              <i class="fab fa-twitter"></i>
+                          </a>
+                          <a href="#" class="social-icon">
+                              <i class="fab fa-google"></i>
+                          </a>
+                          <a href="#" class="social-icon">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                      </div>
+                  </form>
+              </div>
+          </div>
+
+          <div class="panels-container">
+              <div class="panel left-panel ">
+                  <div class="content">
+                      <h3>Hello,Doctor!</h3>
+                      <p>
+                          Enter your personal details and start journey with us
+                      </p>
+                      <button class="btn transparent" id="sign-up-btn">
+                          Sign up
+                      </button>
+                  </div>
+                  <img src="img/logPages/doctoor.svg" class="image signUpContent" alt="" />
+              </div>
+              <div class="panel right-panel">
+                  <div class="content">
+                      <h3>Welcome Back!</h3>
+                      <p>
+                          To keep connected with us please login with your personal info
+                      </p>
+                      <button class="btn transparent" id="sign-in-btn">
+                          Sign in
+                      </button>
+                  </div>
+                  <img src="img/logPages/Insurance-pana (1).svg" class="image signUpContent" alt="" />
+              </div>
+          </div>
+      </div>
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="/js/logStyle.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+    
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+      
+      <script src="/js/fireBaseControllers/log.js"></script>
+     
+  </body>
+</html>

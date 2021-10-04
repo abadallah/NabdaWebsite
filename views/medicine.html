@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Nabda</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/js/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="/css/sideBar.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+ 
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="logo">
+                <h3><a href="/patientList"></a></h3>
+            </div>
+
+            <ul class="list-unstyled menu-elements">
+                <li>
+                    <a class="scroll-link" href="/patientList"><i class="fas fa-home"></i> patient List</a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/profile"><i class="fas fa-user"></i> Profile </a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/contactUs"><i class="fas fa-envelope"></i> Contact us</a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/sessionLogout"><i class="fas fa-sign-out-alt"></i> log Out</a>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- End sidebar -->
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <!-- open sidebar menu -->
+        <div class="open-menu">
+            <nav class="navbar navbar-light bg-white fixed-top shadow-sm py-3 ">
+                <div class="container-fluid ">
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                  
+                </div>
+            </nav>
+        </div>
+
+        <!-- ... -->
+        <!-- here is the page's content (not shown here) -->
+        <!-- section one -->
+        <section class="content pt-5 mb-2" >
+            <div class="container pt-5 table-responsive mt-3" id="doctorDiagnosisTable">
+                <h2 class="text-left">Medicine</h2>
+                <table class="table table-hover border shadow mt-3  p-2" id="myTable" style="font-weight: 400;" >
+                    
+                    <thead>
+                        <tr>
+                            <th colspan="3"> 
+                                <input class="form-control" id="search" type="search" placeholder="Search" aria-label="Search">
+                            </th>
+                            <th class="ml-5 pl-4  ">
+                            <button class="btn bg-info text-white d-inline" data-toggle="modal" data-target="#MedicineModal">
+                                 <i class="fas fa-plus p-1 py-2"></i> 
+                            </button>
+
+                                 
+                                </th>
+                        </tr>
+                        <tr>
+                            <th scope="col"  >Type</th>
+                            <th scope="col"  >Name</th>
+                            <th scope="col"  >Duration</th>
+                            <!-- <th scope="col" >Amount</th> -->
+                            <th scope="col" >Date</th>
+
+                        </tr>
+                        
+                    </thead>
+                    <tbody >
+                        
+                        <!-- <tr>
+                            <th scope="row" > <img src="/img/viewPatient/document.svg" class="img-fluid " alt="medicineImg"> </th>
+                            <td scope="row" id="medicineName"> ketofan </td>
+                            <td  id="medicineAmount"> 1 month </td>
+
+                            <td id="medicineDate">29 / 1 / 2019</td>
+                        </tr> -->
+
+                      
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- End content -->
+
+        <!--  add Medicine Modal -->
+    <div class="modal fade" id="MedicineModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add new Diagnosis</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form class="g-3 medicine-validation" novalidate>
+                        <div class="row mb-3">
+                            <div class="col ">
+                                <h6 class="text-left mb-2"> Medicine Name :</h6>
+                                <input class="form-control"  type="text" name="medicineName" required></input>
+                                <div class="invalid-feedback text-left">
+                                    Please enter Medicine Name.
+                                </div>
+                            </div>
+                            <div class="col ">
+                                <h6 class="text-left mb-2"> Duration :</h6>
+                                <input class="form-control"  type="text" name="medicineDuration" required></input>
+                                <div class="invalid-feedback text-left">
+                                    Please enter Duration.
+                                </div>
+                            </div>
+                            <div class="col ">
+                                <h6 class="text-left mb-2"> Frequency :</h6>
+                                <input class="form-control"  type="text" name="medicineFrequency" required></input>
+                                <div class="invalid-feedback text-left">
+                                    Please enter Frequency.
+                                </div>
+                            </div>
+                        </div>
+                        <h6 class="text-left m-1"> Type : </h6>
+
+                        <div class="row my-4 mx-1 p-1   medicineRow">
+                            
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="drugs" checked>
+                                    <img src="/img/viewPatient/medicine/drugs.svg" alt="drugs"  class=" p-3 rounded shadow-sm ">
+                                  </label>
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="ointment">
+                                <img src="/img/viewPatient/medicine/ointment.svg" alt="ointment"  class=" p-3 rounded shadow-sm ">
+                                </label>
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="syringe">
+                                <img src="/img/viewPatient/medicine/syringe.svg" alt="syringe"  class=" p-3 rounded shadow-sm ">
+                            </label>
+
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="syrup">
+                                <img src="/img/viewPatient/medicine/syrup.svg" alt="syrup"  class=" p-3 rounded shadow-sm ">
+                            </label>
+
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="asthma">
+                                <img src="/img/viewPatient/medicine/asthma.svg" alt="asthma"  class=" p-3 rounded shadow-sm ">
+                            </label>
+
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="urethral">
+                                <img src="/img/viewPatient/medicine/urethral.svg" alt="urethral"  class=" p-3 rounded shadow-sm ">
+                            </label>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer pr-4">
+                            <button type="button" class="btn btn-secondary text-center" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-info text-center" id="submitMecicine"></input>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+
+       
+    </div>
+    <!-- End wrapper -->
+    <!-- Javascript -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- for data Table -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" > </script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="/js/medicine.js"></script>
+    <!-- sweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+</body>
+
+</html>

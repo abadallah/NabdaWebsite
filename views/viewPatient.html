@@ -1,0 +1,884 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Nabda</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- plotly script -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/js/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="/css/sideBar.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body >
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="logo">
+                <h3><a href="/patientList"></a></h3>
+            </div>
+
+            <ul class="list-unstyled menu-elements">
+                <li>
+                    <a class="scroll-link" href="/patientList"><i class="fas fa-home"></i> patient List</a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/profile"><i class="fas fa-user"></i> Profile </a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/contactUs"><i class="fas fa-envelope"></i> Contact us</a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/sessionLogout"><i class="fas fa-sign-out-alt"></i> log Out</a>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- End sidebar -->
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <!-- open sidebar menu -->
+        <div class="open-menu">
+            <nav class="navbar navbar-light bg-white fixed-top shadow-sm py-3 ">
+                <div class="container-fluid ">
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <!-- <form class="d-flex mx-auto w-50 ">
+                        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                    </form> -->
+                </div>
+            </nav>
+        </div>
+
+        <!-- here is the page's content  -->
+
+        <div class="content py-5">
+            <!-- section one -->
+            <section class="py-4">
+                <div class="row shadow mx-3 rounded justify-content-center py-2 ">
+
+                    <!-- basic information section -->
+                    <div class="col-lg shadow  m-3 rounded p-2 " data-aos="fade-right" data-aos-delay="200">
+                        <!--  img n name row -->
+                        <div class="row m-2 mt-4">
+                            <div class="col d-none d-xl-block my-2 p-2">
+                                <img src="/img/viewPatient/profile.png" class="img-fluid w-100 h-100 rounded-pill" alt="patient img" id="patientImg" />
+                            </div>
+                            <div class="col my-auto">
+                                <div class="  text-center">
+                                    <h2 id="patientName">  </h2>
+                                    <h5 class="lead" id="patientAge">  </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="shadow w-75" />
+                        <!--basic info row -->
+                        <div class="row mb-4 p-2">
+                            <div class="col">
+                                <div>
+                                    <h6> Height </h6>
+                                    <h6 class="lead" id="patientHeight"></h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h6> Weight </h6>
+                                    <h6 class="lead" id="patientWeight"></h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <h6> Blood Type </h6>
+                                    <h6 class="lead" id="patientBloodType"></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of height n weight -->
+
+                    </div>
+                    <!-- end of basic info-->
+
+
+                    <!-- Medical info-->
+                    <div class="col-lg-8  m-3 p-2 ">
+                        <div class="row h-50">
+                                <!-- Heart Rate -->
+                                <div class="col  m-2 shadow rounded" data-aos="fade-right" data-aos-delay="200">
+                                    <div class="row pt-2 px-2">
+                                        <div class="col">
+                                            <div class="row">
+                                                <img src="/img/viewPatient/Heart rate.svg" class="img-fluid icons" alt="heart rate" />
+                                                <h6 class="ml-2 pt-1"> HeartRate </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col ml-auto">
+                                            <h6 id="heartRate" class="lead text-right"> 108 per min </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <img src="/img/viewPatient/Heart rate 2.svg" class="img-fluid  w-75 p-2 mx-auto" alt="heart rate" />
+                                    </div>
+                                </div>
+
+                                <!-- Blood Pressure -->
+                                <div class="col  m-2 shadow rounded"  data-aos="fade-down" data-aos-delay="200">
+                                    <div class="row pt-2 px-1">
+                                        <div class="col">
+                                            <div class="row ">
+                                                <img src="/img/viewPatient/blood pressure.svg" class="img-fluid icons" alt="blood pressure" />
+                                                <h6 class="ml-1 pt-1"> BloodPressure </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col ml-auto">
+                                            <h6 id="bloodPressure" class="lead text-right"> 120/80 mm/Hg</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <img src="/img/viewPatient/blood pressure2.svg" class="img-fluid  w-100 p-2 mx-auto" alt="blood pressure" />
+                                    </div>
+                                </div>
+
+                                <!-- Oxygen -->
+                                <div class="col m-2 shadow rounded"  data-aos="fade-left" data-aos-delay="200">
+                                    <div class="row pt-2 px-2">
+                                        <div class="col">
+                                            <div class="row">
+                                                <img src="/img/viewPatient/oxygen.svg" class="img-fluid icons" alt="Oxygen" />
+                                                <h6 class="ml-2 pt-1"> Oxygen </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col ml-auto">
+                                            <h6 id="oxygen" class="lead text-right"> 97% </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <img src="/img/viewPatient/oxgyn2.svg" class="img-fluid  w-100 p-2 mx-auto" alt="Oxygen" />
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- end of first medical info row -->
+                        <!-- second medical row -->
+                        <div class="row h-50">
+
+                            <!-- temperature -->
+                            <div class="col  m-2 shadow rounded"  data-aos="fade-up-right" data-aos-delay="200">
+                                <div class="row pt-2 px-2">
+                                    <div class="col">
+                                        <div class="row">
+                                            <img src="/img/viewPatient/temperature.svg" class="img-fluid icons" alt="temperature" />
+                                            <h6 class="ml-2 pt-1"> Temperature </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col ml-auto">
+                                        <h6 id="temp" class="lead text-right"> 37 celsius </h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <img src="/img/viewPatient/temperature 2.svg" class="img-fluid w-100 p-2 pt-4 mx-auto " alt="temperature" />
+                                </div>
+                            </div>
+
+                            <!-- Sleep -->
+                            <div class="col m-2 shadow rounded" data-aos="fade-up-left" data-aos-delay="200">
+                                <div class="row pt-2 px-2">
+                                    <div class="col">
+                                        <div class="row">
+                                            <img src="/img/viewPatient/Sleep.svg" class="img-fluid icons" alt="sleep" />
+                                            <h6 class="ml-2 pt-1"> Sleep </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col ml-auto">
+                                        <h6 id="sleep" class="lead text-right"> 7 hour </h6>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <img src="/img/viewPatient/sleep2.svg" class="img-fluid w-100 p-2 mx-auto" alt="sleep" />
+                                </div>
+                            </div>
+                            <!-- Steps -->
+                            <div class="col m-2 shadow rounded" data-aos="fade-up-left" data-aos-delay="200">
+                                <div class="row pt-2 px-2">
+                                    <div class="col">
+                                        <div class="row">
+                                            <img src="/img/viewPatient/step.svg" class="img-fluid icons" alt="steps" />
+                                            <h6 class="ml-2 pt-1"> Steps </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col ml-auto">
+                                        <h6 id="sleep" class="lead text-right"> 1600 Steps </h6>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <img src="/img/viewPatient/Line.svg" class="img-fluid w-100 p-2 mx-auto" alt="steps" />
+                                </div>
+                            </div>
+
+
+                    </div>
+                        <!-- End second medical info row -->
+                    <!-- End medical info container -->
+                    </div>
+                    <!-- End medical info column -->
+                </div>
+                <!-- End row one -->
+            </section>
+            <!-- End section one -->
+
+            <!-- Section two -->
+            <section class="py-4" id="sectionTwo">
+                <div class="row shadow mx-3 rounded justify-content-center py-4 " >
+                    <!-- Doctor Diagnosis-->
+                    <div class="col-xl shadow m-2 rounded p-3 " data-aos="fade-up" data-aos-duration="800"  id="doctorDiagnosisSection" >
+                        <div class="container pb-2">
+                            <h5 class="mr-4 p-2 d-inline text-info"> Doctor Diagnosis </h5>    
+                            <button class="btn bg-info text-white d-inline" data-toggle="modal" data-target="#diagnosisModal"> <i class="fas fa-plus p-1 py-2"></i> </button>
+                        </div>
+                        <div class="container mb-3" id="doctorDiagnosis">
+                            <table class="table table-hover" id="doctorDiagnosisTable">
+                                <thead>
+                                    <th></th>
+                                    <th></th>
+
+                                </thead>
+                                <tbody>
+                              
+                               <!-- doctor row -->
+
+                                <tr class="shadow-sm " data-toggle="modal" data-id="1" data-target="#viewDiagnosis">
+                                    <td>
+                                        <img src="/img/viewPatient/doctor.jpg" id="doctorImg" class="rounded-circle  img-fluid" alt="doctor" >
+                                    </td>
+                                    <td  class="text-middle py-3">
+                                        <div>
+                                            <h6 class="doctorName"> Dr Name </h6>
+                                            <h6 class="diagnoseDate"> 2018 / 4 / 19 </h6>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tfoot>
+
+                                </tfoot>
+                              
+                                
+                                
+                            </tbody>
+                            </table>
+                        </div>
+
+                    <a class="anchors" href="/patientList/patient/doctorDiagnosis"> View All </a>
+                    </div>
+
+                    <!-- Medicine -->
+                    <div class="col-lg shadow m-2 rounded p-3 " data-aos="fade-up" data-aos-duration="850" id="medicineSection">
+                        <div class="container pb-2">
+                            <h5 class="mr-4 p-2 d-inline text-info"> Medicine </h5>
+                            <button class="btn bg-info text-white d-inline" data-toggle="modal" data-target="#MedicineModal"> <i class="fas fa-plus p-1 py-2"></i> </button>
+
+                        </div>
+                        <div class="container mb-4"  id="Medicine">
+                            <table class="table table-hover text-left " id="MedicineTable" style="font-weight: 500;">
+
+                                <tbody>
+                                <!-- Medicine row -->
+                                <tr class="shadow-sm ">
+                                    <td class="py-3">
+                                        
+                                        <h6 class="medicineName"> ketofan </h6>
+                                    </td>
+                                    <td  class="py-3">
+                                            <h6 class="medicineAmount"> 1 pill everyday </h6>
+                                    </td>
+                                </tr>
+                                <!-- Medicine row -->
+                                <tr class="shadow-sm ">
+                                    <td class="py-3">
+                                        
+                                        <h6 class="medicineName"> ketofan </h6>
+                                    </td>
+                                    <td  class="py-3">
+                                            <h6 class="medicineAmount"> 1 pill everyday </h6>
+                                    </td>
+                                </tr>
+                                <!-- Medicine row -->
+                                <tr class="shadow-sm ">
+                                    <td class="py-3">
+                                        
+                                        <h6 class="medicineName"> ketofan </h6>
+                                    </td>
+                                    <td  class="py-3">
+                                            <h6 class="medicineAmount"> 1 pill everyday </h6>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                            </table>
+                        </div>
+                        <a class="anchors" href="/patientList/patient/medicine"> View All </a>
+                    </div>
+                    
+                    <!-- Medical Test-->
+                    <div class="col-lg shadow m-2 rounded p-3 " data-aos="fade-up"data-aos-duration="900" >
+                        <div class="container pb-2">
+                            <h5 class="mr-4 p-2 d-inline text-info"> Medical Test </h5>
+                            <label for="file-upload" class="custom-file-upload bg-info text-white rounded" id="addmedicalTest">
+                                <i class="fas fa-plus"></i>
+                              </label>
+                              <input id="file-upload" name='CTScan' type="file" accept=".pdf,.doc"  style="display:none;">
+                        </div>
+                        <div class="container mb-3" id="medicalTest">
+                            <table class="table table-hover">
+                                <tbody>
+                                <!-- medical test row -->
+                                
+                                <tr class="shadow-sm " data-toggle="modal" data-id="1" data-target="#MedicalTestModal">
+                                    <td>
+                                        <img src="/img/viewPatient/document.svg" class="rounded img-fluid" alt="doctor" >
+                                    </td>
+                                    <td  class="text-left py-3">
+                                            <h6 class="testName"> CBC.pdf </h6>
+                                            <h6 class="testDate"> 4 / 7 / 2021 </h6>
+                                    </td>
+                                </tr>
+                                <!-- <tr class="shadow-sm " data-toggle="modal" data-id="1" data-target="#MedicalTestModal">
+                                    <td>
+                                        <img src="/img/viewPatient/document.svg" class="rounded img-fluid" alt="doctor" >
+                                    </td>
+                                    <td  class="text-left py-3">
+                                            <h6 class="testName"> CBC.pdf </h6>
+                                            <h6 class="testDate"> 5 / 7 / 2021 </h6>
+                                    </td>
+                                </tr> -->
+                               
+                                
+                            </tbody>
+                            </table>
+                        </div>
+                    <a class="anchors" href="/patientList/patient/medicalTest"> View All </a>
+                    </div>
+                    
+                    <!-- CT Scan-->
+                    <div class="col-lg shadow m-2 rounded p-3 " data-aos="fade-up" data-aos-duration="950" >
+                        <div class="container pb-2">
+                            <h5 class="mr-4 p-2 d-inline text-info"> MRI Scan </h5>
+                            <label for="file-upload" class="custom-file-upload bg-info text-white rounded"id="addCTScan">
+                                <i class="fas fa-plus"></i>
+                              </label>
+                              <input id="file-upload" name='CTScan' type="file" accept=".pdf,.doc"  style="display:none;">
+                        </div>
+                        <div class="container mb-3" id="ctScan">
+                            <table class="table table-hover">
+                                <tbody>
+                               
+                                <!-- CT Scan row -->
+                                <tr class="shadow-sm "data-toggle="modal" data-id="1" data-target="#MRIModal">
+                                    <td>
+                                        <img src="/img/viewPatient/document.svg" class="rounded img-fluid" alt="doctor" >
+                                    </td>
+                                    <td  class="text-left py-3">
+                                            <h6 class="scanName"> MRI-Scan.pdf </h6>
+                                            <h6 class="scanDate"> 4 / 7 / 2021 </h6>
+                                    </td>
+                                </tr>
+                                <!-- CT Scan row -->
+                                <!-- <tr class="shadow-sm " data-toggle="modal" data-id="1" data-target="#MRIModal">
+                                    <td>
+                                        <img src="/img/viewPatient/document.svg" class="rounded img-fluid" alt="doctor" >
+                                    </td>
+                                    <td  class="text-left py-3">
+                                            <h6 class="scanName"> MRI-Scan.pdf </h6>
+                                            <h6 class="scanDate"> 28 Jan 2018 </h6>
+                                    </td>
+                                </tr> -->
+                               
+                                
+                            </tbody>
+                            </table>
+                        </div>
+                    <a class="anchors" href="/patientList/patient/ctScan"> View All </a>
+                    </div>
+                </div>
+            </section>
+            <!--End Section One -->
+
+            <!-- Section Three -->
+            <section class="py-4" id="sectionThree">
+                <div class="row shadow mx-3 rounded justify-content-center py-4 ">
+                    <!-- ECG Result-->
+                    <div class="col-xl shadow m-2 rounded p-3 " data-aos="fade-up" data-aos-duration="950">
+                        <div class="container pb-2">
+                            <h5 class="mr-4 p-2 d-inline text-info"> ECG Result </h5>
+                            <!-- <label for="file-upload" class="custom-file-upload bg-info text-white rounded">
+                                <i class="fas fa-plus"></i>
+                              </label>
+                              <input id="file-upload" name='CTScan' type="file" accept=".pdf,.doc"  style="display:none;"> -->
+                        </div>
+                        <div class="container mb-3"  id="ecgResult">
+                            <table class="table table-hover">
+                                <tbody>
+                                
+                                <!-- ECG Result row -->
+                                <tr class="shadow-sm " data-toggle="modal" data-id="1" data-target="#ECGresultModal">
+                                    <td>
+                                        <img src="/img/viewPatient/document.svg" class="rounded img-fluid" alt="doctor" >
+                                    </td>
+                                    <td  class="text-left py-3">
+                                            <h6 class="ecgName"> ECG.pdf </h6>
+                                            <h6 class="ecgDate"> 19 / 4 / 2021 </h6>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                            </table>
+                        </div>
+                    <a class="anchors" href="/patientList/patient/ecgResult"> View All </a>
+                    </div>
+
+                    <!-- Nutrition n Exercises  -->
+                     <div class="col-lg shadow m-2 rounded p-3 " data-aos="fade-up"data-aos-duration="900"  >
+
+                        <div class="container h-100" >
+
+                            <ul  class="nav nav-pills pb-4 " >
+                                <li class="nav-item active mr-4">
+                                    <a  href="#1a" data-toggle="tab">Nutrition</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#2a" data-toggle="tab">activities</a>
+                                </li>
+                            </ul>
+                        
+                            <div class="tab-content clearfix" id="Nutrition">
+                                <div class="tab-pane active" id="1a">
+                                    
+                                    <div class="px-0 text-left  shadow-sm mb-3">
+                                        <div class="p-3 text-left">
+                                            <img src="/img/viewPatient/Nutrition.svg" alt="Nutrition" class="img-fluid" width="20px">
+                                            <h6 class="text-dark  d-inline mr-2">today </h6>
+                                        </div>
+                                        <ul class="d-inline-block px-5 NutritionList" id="nutrition1">
+                                            <!-- <li class="color-dark"> vigitable </li>
+                                            <li> Fruits  </li> -->
+                                        </ul>
+                                        <ul class="d-inline-block "id="nutrition2">
+                                            <!-- <li> Meat </li>
+                                            <li> water</li>  -->
+                                        </ul>
+                                    </div>
+                                    <div class="px-0 text-left  shadow-sm NutritionList ">
+                                        <div class="p-3 text-left">
+                                            <img src="/img/viewPatient/Nutrition.svg" alt="Nutrition" class="img-fluid" width="20px">
+                                            <h6 class="text-dark  d-inline mr-2">yesterday </h6>
+                                        </div>
+                                        <ul class="d-inline-block px-5" id="nutrition3">
+                                            <!-- <li class="color-dark"> vigitable </li>
+                                            <li> Fruits  </li> -->
+                                        </ul>
+                                        <ul class="d-inline-block "id="nutrition4">
+                                            <!-- <li> Meat </li>
+                                            <li> water</li>  -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="2a">
+                                    
+                                    <div class="px-0 text-left  shadow-sm mb-3">
+                                        <div class="p-3 text-left">
+                                            <img src="/img/viewPatient/Exercise.svg" alt="exercise" class="img-fluid" width="25px">
+                                            <h6 class="text-dark  d-inline mr-2">today </h6>
+                                        </div>
+                                        <ul class="d-inline-block px-5 exerciseList">
+                                            <li class="color-dark"> Running </li>
+                                            <li> walking  </li>
+                                        </ul>
+                                        
+                                    </div>
+                                    <div class="px-0 text-left  shadow-sm exerciseList ">
+                                        <div class="p-3 text-left">
+                                            <img src="/img/viewPatient/exercise.svg" alt="exercise" class="img-fluid" width="25px">
+                                            <h6 class="text-dark  d-inline mr-2">yesterday </h6>
+                                        </div>
+                                        <ul class="d-inline-block px-5">
+                                            <li class="color-dark"> Running </li>
+                                            <li>  walking  </li>
+                                        </ul>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Notes-->
+                    <div class="col-lg shadow m-2 rounded p-2 " data-aos="fade-up" data-aos-duration="850" >
+                        <div class="container pb-2">
+                            <h5 class="p-2 text-info"> Notes </h5>
+                            <div class="container-fluid shadow"id="notes" >
+                                <ul  class="pt-4" id="list">
+                                    <li> lorem Ipsum text place holl   </li>
+                                    
+
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Prediction -->
+                    <div class="col-lg shadow m-2 rounded p-2 "  data-aos="fade-up" data-aos-duration="800" >
+                        <div class="container-fluid pb-2">
+                            <h5 class=" p-2 text-info"> Prediction </h5>
+                           
+                            <div id="prediction" class="container-fluid p-4 shadow">
+                                lorem Ipsum text place holl text
+                                last quick lorel trim height fill
+                                with animall splash ui faces
+                                image lorem Ipsum text placem
+                                holl text last settings quick lorel
+                                trimhei ght fill with animal lph
+                                oto splash
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End section three-->
+
+        </div>
+        <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+    <!--  add Doctor Diagnosis Modal -->
+    <div class="modal fade" id="diagnosisModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add new Diagnosis</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form class="g-3 needs-validation" novalidate>
+                        <div class="row mb-3">
+                            <div class="col ">
+                                <h6 class="text-left"> Symptoms </h6>
+                                <textarea class="form-control" name="newSymptoms" rows="4" required></textarea>
+                                <div class="invalid-feedback text-left">
+                                    Please enter patient symptoms.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col ">
+                                <h6 class="text-left"> Diagnosis </h6>
+                                <textarea class="form-control" name="newDiagnosis" rows="4" required></textarea>
+                                <div class="invalid-feedback text-left">
+                                    Please enter patient Diagnosis.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pr-4">
+                            <button type="button" class="btn btn-secondary text-center" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-info text-center">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+
+    <!-- view Diagnosis Modal -->
+    <div id="viewDiagnosis" class="modal fade" role="dialog" aria-labelledby="viewDiagnosis" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid ">
+                        <form >
+                            <div class="row mb-3">
+                                <div class="col ">
+                                    <div class="row">
+                                    <div class=" col text-left">
+                                        <img src="/img/viewPatient/doctor.jpg" id="doctorImg" class="d-inline rounded-circle  img-fluid mr-2" alt="doctor" >
+                                        <h6 class="doctorName d-inline "> Dr Name </h6>
+                                    </div>
+                                    <div class="col text-right p-3">
+                                        <h6 class="diagnoseDate  d-inline  py-3 "> 20 / 4 / 2021 </h6>
+
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col ">
+                                    <h6 class="text-left"> Symptoms </h6>
+                                    <div class="form-control text-left" id="currentSymptoms"> aaa  </div>
+                                </div>
+                            </div>
+    
+                            <div class="row mb-3">
+                                <div class="col ">
+                                    <h6 class="text-left"> Diagnosis </h6>
+                                    <div class="form-control text-left" id="currentDiagnosis"> aaaa </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer pr-5">
+                    <button type="button" class="btn btn-secondary text-center" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+    </div>
+    <!--  add Medicine Modal -->
+    <div class="modal fade" id="MedicineModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add new Diagnosis</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form class="g-3 medicine-validation" novalidate>
+                        <div class="row mb-3">
+                            <div class="col ">
+                                <h6 class="text-left mb-2"> Medicine Name :</h6>
+                                <input class="form-control"  type="text" name="medicineName" required></input>
+                                <div class="invalid-feedback text-left">
+                                    Please enter Medicine Name.
+                                </div>
+                            </div>
+                            <div class="col ">
+                                <h6 class="text-left mb-2"> Duration :</h6>
+                                <input class="form-control"  type="text" name="medicineDuration" required></input>
+                                <div class="invalid-feedback text-left">
+                                    Please enter Duration.
+                                </div>
+                            </div>
+                            <div class="col ">
+                                <h6 class="text-left mb-2"> Frequency :</h6>
+                                <input class="form-control"  type="text" name="medicineFrequency" required></input>
+                                <div class="invalid-feedback text-left">
+                                    Please enter Frequency.
+                                </div>
+                            </div>
+                        </div>
+                        <h6 class="text-left m-1"> Type : </h6>
+
+                        <div class="row my-4 mx-1 p-1   medicineRow">
+                            
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="drugs" checked>
+                                    <img src="/img/viewPatient/medicine/drugs.svg" alt="drugs"  class=" p-3 rounded shadow-sm ">
+                                  </label>
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="ointment">
+                                <img src="/img/viewPatient/medicine/ointment.svg" alt="ointment"  class=" p-3 rounded shadow-sm ">
+                                </label>
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="syringe">
+                                <img src="/img/viewPatient/medicine/syringe.svg" alt="syringe"  class=" p-3 rounded shadow-sm ">
+                            </label>
+
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="syrup">
+                                <img src="/img/viewPatient/medicine/syrup.svg" alt="syrup"  class=" p-3 rounded shadow-sm ">
+                            </label>
+
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="asthma">
+                                <img src="/img/viewPatient/medicine/asthma.svg" alt="asthma"  class=" p-3 rounded shadow-sm ">
+                            </label>
+
+                            </div>
+                            <div class="col  rounded p-2">
+                                <label>
+                                    <input type="radio" name="MedicineType" value="urethral">
+                                <img src="/img/viewPatient/medicine/urethral.svg" alt="urethral"  class=" p-3 rounded shadow-sm ">
+                            </label>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer pr-4">
+                            <button type="button" class="btn btn-secondary text-center" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-info text-center" id="submitMecicine"></input>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    <!-- View ECG Results Modal -->
+
+    <div class="modal fade" id="ECGresultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> Irregular signal  </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div id="chart" > </div>
+                    <div  class="d-inline-block  align-middle align-items-center ">
+                        <h3>
+                            Our Expected Diagnosis is :
+                        </h3>
+                        <p class="lead text-danger">
+                            Premature ventricular contraction
+                        </p>
+                    </div>
+
+                    <div class="modal-footer pr-4">
+                        <button type="button" class="btn btn-secondary text-center" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    <!-- View medical-Tests Modal -->
+
+    <div class="modal fade" id="MedicalTestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> CBC  </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <img src="/img/viewPatient/CBC.png" alt="test-result" class="">
+
+                    <div class="modal-footer pr-4">
+                        <button type="button" class="btn btn-secondary text-center" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+     <!-- View MRI-Tests Modal -->
+
+     <div class="modal fade" id="MRIModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> MRI-Scan  </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="row container-fluid">
+                    <div class="col">
+                        <h6> Result </h6>
+                        <img src="/img/viewPatient/input.png" class="MRI" >
+                    </div>
+                    <!-- <div class="col">
+                        <img src="/img/viewPatient/rightArrow.png" class="w-50" >
+                    </div> -->
+                    <div class="col">
+                        <h6> Take care of </h6>
+                        <img src="/img/viewPatient/output.png" class="MRI" >
+                    </div>
+                </div>
+                <div class="modal-footer pr-4">
+                    <button type="button" class="btn btn-secondary text-center mr-5" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+    <!-- for data Table -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" > </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="/js/viewPatient.js"></script>
+    <!-- sweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="/js/scripts.js"></script>
+    
+    <script>
+        $('medImages').click(function(){
+        $('.selected').removeClass('selected'); // removes the previous selected class
+        $(this).addClass('selected'); // adds the class to the clicked image
+        });
+    </script>
+</body>
+
+</html>

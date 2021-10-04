@@ -1,0 +1,110 @@
+
+
+
+
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: #222;
+}
+
+.profile-pic-div{
+    height: 200px;
+    width: 200px;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(10%,10%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid grey;
+}
+
+#photo{
+    height: 100%;
+    width: 100%;
+}
+
+#file{
+    display: none;
+}
+
+#uploadBtn{
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    line-height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+form-control:focus {
+    box-shadow: none;
+    border-color: #011824;
+   }
+
+h2{
+color: #555;
+}
+.form-control{
+background-color:  #eff2f3d5;
+border-radius: 10px;
+}
+
+#save-btn{
+    width: 90px;
+}
+
+label{
+
+font-size: 18px ;
+color:#005d8d;
+font-weight: 400;
+}
+
+.profile-button,.change-butt {
+background: #005d8d;
+box-shadow: none;
+border: none ;
+border-radius: 10px;
+
+}
+
+.profile-button,.change-butt:hover {
+background: #005d8d;
+}
+
+.profile-button,.change-butt:focus {
+background: #005d8d;
+box-shadow: none ; 
+}
+
+.profile-button,.change-butt:active {
+background: #005d8d;
+box-shadow: none;
+}
+
+.back:hover {
+color: #005d8d;
+cursor: pointer
+}
+div.containerr{
+      
+border-radius:10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+text-align: left ;
+
+}
+span{
+color: #005d8d;
+font-size: 20px;
+padding-left: 30px;
+}         

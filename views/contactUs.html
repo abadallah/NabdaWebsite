@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Nabda</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/sideBar.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+ 
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="logo">
+                <h3><a href="/patientList"></a></h3>
+            </div>
+
+            <ul class="list-unstyled menu-elements">
+                <li>
+                    <a class="scroll-link" href="/patientList"><i class="fas fa-home"></i> patient List</a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/profile"><i class="fas fa-user"></i> Profile </a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/contactUs"><i class="fas fa-envelope"></i> Contact us</a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="/sessionLogout"><i class="fas fa-sign-out-alt"></i> log Out</a>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- End sidebar -->
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <!-- open sidebar menu -->
+        <div class="open-menu">
+            <nav class="navbar navbar-light bg-white fixed-top shadow-sm py-3 ">
+                <div class="container-fluid ">
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+
+                </div>
+            </nav>
+        </div>
+
+        <!-- ... -->
+        <!-- here is the page's content (not shown here) -->
+        <!-- section one -->
+        <div class="content py-5 mb-5" >
+            <section id="aboutHeading" class="py-5" data-aos="fade-zoom-in" data-aos-duration="2000">
+                    <div class="darkOverlay">
+                        <div class="container mt-5 pt-2 ">
+                            <div class="row">
+                                <div class="col text-white">
+                                    <h1 class="display-4 text-white" data-aos="zoom-in" >Contact Us</h1>
+                                    <p data-aos="fade-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, temporibus?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            <section id="contactUsBody" class="py-5">
+                
+                <div class="container">
+                    <div class="row" data-aos="fade-up" fade-aos-duration="1000">
+                        <div class="col-md-4" >
+                            <div class="card shadow">
+                                <div class="card-body p-5">
+                                    <div>
+                                        <h4> Get In Touch </h4>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, odio!</p>
+                                    </div>
+                                    <div>
+                                        <h4>Adress</h4>
+                                        <p>550 Main st, Boston MA</p>
+                                    </div>
+                                    <div>
+                                        <h4>Email</h4>
+                                        <p>test@test.com</p>
+                                    </div>
+                                    <div>
+                                        <h4>Phone</h4>
+                                        <p>(555) 555-5555</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 " >
+                            <div class="card shadow text-center p-5">
+                                <h3>Please fill out this form to contact us</h3>
+                                <hr>
+                                <div class="card-body">
+                                    <form class="row form-group ">
+                                        <div class="row  ">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control mb-3" placeholder="First Name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control mb-3" placeholder="Last Name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control mb-3" placeholder="Email">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control mb-3" placeholder="Phone Number">
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea name="Message" id="message" class="form-control mb-3" rows="3"placeholder="Message"></textarea>  
+                                            </div>
+                                            <div class="col-12">
+                                                <input type="submit" class="btn btn-outline-dark d-block form-control" value="submit">                          
+                                            </div>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us Body -->
+            <section id="teamCards" class="d-none d-xl-block container-xl ">
+                <div class="">
+                  <h1 class="display-4 pt-3 text-white mb-0">Our Team </h1>
+                    <!-- showCase -->
+                    <div id="myCarousel" class="carousel slide my-0 p-0" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                      </ol>
+                      <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                          <div class="insideSlider text-dark">
+                            <div class="row">
+                              <!--col-->
+          
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/abdullah.jpg" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Abdullah Ragab
+                                    </h3>
+                                    <h5 class="text-muted">Data Scientist</h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/hania.jpg" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Hania Serag
+                                    </h3>
+                                    <h5 class="text-muted">Web developer</h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--col-->
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/salma.JPEG" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Salma Hesham
+                                    </h3>
+                                    <h5 class="text-muted">Web Developer</h5>
+
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/negm.jpg" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Ahmed Negm
+                                    </h3>
+                                    <h5 class="text-muted">Data Scientist</h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                             
+                              <!--col-->
+          
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/safty.jpg" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Ahmed elsafty
+                                    </h3>
+                                    <h5 class="text-muted">Data Scientist</h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end of first item -->
+          
+                        <!-- Secont item-->
+          
+                        <div class="carousel-item ">
+                          <div class="insideSlider text-dark" >
+                            <div class="row">
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/menna.jpg" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Menna Mohamed
+                                    </h3>
+                                    <h5 class="text-muted">UI/UX Designer</h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!--col-->
+          
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/rafaat.jpg" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Rafaat Elries
+                                    </h3>
+                                    <h5 class="text-muted">Data Scientist</h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              
+                              <!--col-->
+          
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/naira.png" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Naira Bassam
+                                    </h3>
+                                    <h5 class="text-muted">iOS Developer</h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--col-->
+          
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/motaz.jpg" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Moataz Abdelfatah
+                                    </h3>
+                                    <h5 class="text-muted">Data Scientist</h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--col-->
+                              <!--col-->
+          
+                              <div class="col">
+                                <div class="card ">
+                                  <div class="card-body">
+                                    <img src="/img/contactUs/team/salem.jpg" class=" card-img-top w-50 rounded-circle" alt="p1">
+                                    <h3 class="card-title">
+                                      Salem Mohamed
+                                    </h3>
+                                    <h5 class="text-muted">System Analyst </h5>
+          
+                                    <div class="d-flex justify-content-center">
+                                      <div class="px-3 py-4">
+                                        <a href="http://linkedin.com">
+                                          <i class="fab fa-linkedin"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://twitter.com">
+                                          <i class="fab fa-twitter"></i>
+                                        </a>
+                                      </div>
+                                      <div class="p-3 py-4">
+                                        <a href="http://github.com">
+                                          <i class="fab fa-github"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+          
+                        
+                        <!--end of second item -->
+                      </div>
+                      <!-- end of inner carsol -->
+                    </div>
+                    <!-- carsoul -->
+                </div>
+                <!-- end of container -->
+              </section>
+            
+        </div>
+        <!-- End content -->
+        <footer id="footer" class=" text-center text-dark pt-4 pb-3">
+            <div class="container">
+              <div class="row">
+                <div class="d-flex mx-auto mb-3 ">
+                  <div data-aos="flip-left">
+                    <a href="http://facebook.com">
+                      <img src="/img/landingPage/facebook.svg" class="w-75">
+                    </a>
+                  </div>
+                  <div data-aos="flip-left">
+                    <a href="http://twitter.com">
+                      <img src="/img/landingPage/Twitter.svg" class="w-75">
+                    </a>
+                  </div>
+                  <div data-aos="flip-left">
+                    <a href="http://linkedin.com">
+                      <img src="/img/landingPage/linked in.svg" class="w-75">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h6>
+                  Copyright &copy;
+                  <span id="year"></span>
+                  Nabda. All rights reserved.
+                </h6>
+        
+              </div>
+            </div>
+          </footer>
+
+    </div>
+    <!-- End wrapper -->
+    <!-- Javascript -->
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="/js/scripts.js"></script>
+    <script>
+        $('#year').text(new Date().getFullYear());
+        $('body').scrollspy({ target: '#main-nav' });   
+        $('#myCarousel').carousel({
+        interval: 4000
+        });
+    </script>
+</body>
+
+</html>

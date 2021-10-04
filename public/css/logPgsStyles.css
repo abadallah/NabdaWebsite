@@ -1,0 +1,100 @@
+.leftside , .rightside {
+    height: 50vh;
+    width: 100%;
+}
+@media screen and (min-width:768px )
+{
+	.leftside,.rightside
+	{
+		height: 100vh;
+	}
+	
+}
+h1 {
+	font-weight: bold;
+	color: #005d8d;
+
+	margin: 0;
+}
+h2 {
+	text-align: center;
+}
+
+p {
+
+	font-size: 16px bold ;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+
+.leftside{
+	background: #fff;
+}
+.rightside{
+	background: #ffff;
+}
+section{
+	border: 4px;
+	border-color: mintcream;
+}
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}input {
+	background-color: #eee;
+	border-radius: 10px;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 450px;
+}
+input:active {
+	transform: scale(0.95);
+}
+input:focus {
+	outline: none;
+}
+
+input.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+button {
+	border-radius: 10px;
+
+	
+	border: 1px solid #005d8d;
+	background:linear-gradient( #005d8d,#417e9e);
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	width: 450px;
+}
+button:active {
+	transform: scale(0.95);
+}
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+td,th{
+	text-align: left;
+}
+
